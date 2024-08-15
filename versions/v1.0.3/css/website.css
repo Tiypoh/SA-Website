@@ -1,0 +1,128 @@
+main::-webkit-scrollbar {
+	display: none;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+a {
+}
+p {
+	max-width: min(90%, 1000px);
+	margin: 2vw auto;
+	font-size: min(4.5vw, 25px);
+	font-family: avenir;
+}
+h1 {
+	
+}
+h2 {
+	background-color: #ffffff;
+	font-size: min(7vw, 35px);
+	color: #555555;
+	padding: 1vh 3vh;
+	margin: 0 auto 3vh;
+	display: inline-flex;
+}
+hr {
+	border: 1px solid white;
+	margin: 4.5vh auto -4.5vh;
+	width: 99%;
+	height: 0;
+}
+body {
+	margin: 0;
+	text-align: center;
+	color: #ffffff;
+	background-color: #000000;
+	font-family: avenirlight, sans-serif;
+}
+header {
+	height: 30vh;
+	background: #353738;
+	color: white;
+	width: 100%;
+	z-index: 1;
+	position: sticky;
+	top: -17vh;
+}
+header > a {
+	text-decoration: none;
+	color: white;
+}
+a > picture > img {
+	height: 15vh;
+	margin-top: 2vh;
+}
+a > h1 {
+	margin: -1vh 0 1vh;
+	font-size: min(4vh, 10vw);
+}
+nav {
+	background-color: #999999;
+	font-size: min(4vw, 2vh);
+}
+nav > a {
+	text-decoration: none;
+	color: white;
+	margin: auto min(1vw, 1vh);
+	padding: 1vh;
+	background-color: #504e4e;
+}
+nav > a:hover {
+	color: black;
+	background-color: #ffffff;
+}
+main {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	display: grid;
+	position: relative;
+}
+.spanbg {
+	position: fixed;
+	overflow: hidden;
+	width: 100vw;
+	height: calc(50vw + 18vh);
+	min-height: calc(50vh + 18vh);
+	max-height: calc(70vh + 18vh);
+	margin-top: 12.5vh;
+}
+.spanbg > picture > img {
+	width: 100vw;
+	height: 100%;
+	object-fit: cover;
+}
+.span {
+	height: 50vw;
+	min-height: 50vh;
+	max-height: 70vh;
+	align-items: center;
+	justify-content: center;
+	display: grid;
+}
+.span > span {
+	font-family: luloclean;
+	font-size: 8vmin;
+	color: #ffffff;
+	letter-spacing: 3vmin;
+	margin: auto;
+}
+.bg {
+	background-image: url('../pics/sunsetbg.webp'), url('../pics/sunsetbg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 5vw 0;
+	width: 100vw;
+}
+.bg > div {
+	padding: 2.5vw 10vw;
+}
+.autoformat {
+	display: grid;
+    grid-gap: 5vw;
+}
+@media (min-width: 100vh) {
+	.autoformat {
+		grid-template-columns: auto auto;
+	}
+}

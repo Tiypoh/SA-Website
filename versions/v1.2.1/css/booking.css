@@ -1,0 +1,20 @@
+h2 {
+	margin: auto;
+	font-family: luloclean;
+	background-color: var(--blank);
+	color: var(--text-color);
+}
+iframe {
+	background-color: rgba(from var(--text-color) r g b / 0.3)
+}
+#span {
+	height: 15vh;
+	min-height: 15vh;
+}
+#span-img {
+	height: 100vh;
+}
+#span-img img {
+	height: 100vh;
+	object-fit: cover;
+}

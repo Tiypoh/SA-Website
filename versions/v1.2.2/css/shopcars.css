@@ -1,0 +1,52 @@
+.autoformat, .autoformat > div {
+	display: grid;
+    grid-gap: 5vw;
+}
+@media (min-width: 120vh) {
+	.autoformat {
+		grid-template-columns: auto auto;
+	}
+}
+@media (max-width: 120vh) {
+	.autoformat {
+		grid-template-columns: auto;
+	}
+}
+.autoformat img {
+	padding: 5%;
+	margin: auto;
+	width: 85%;
+}
+.autoformat img:hover {
+	transform: scale(1.17);
+}
+.autoformat > div:nth-child(2n + 1) picture:nth-child(5n + 1) img {
+	background-color: var(--color-4);
+}
+.autoformat > div:nth-child(2n + 1) picture:nth-child(5n + 2) img {
+	background-color: var(--color-1);
+}
+.autoformat > div:nth-child(2n + 1) picture:nth-child(5n + 3) img {
+	background-color: var(--color-3);
+}
+.autoformat > div:nth-child(2n + 1) picture:nth-child(5n + 4) img {
+	background-color: var(--color-f);
+}
+.autoformat > div:nth-child(2n + 1) picture:nth-child(5n) img {
+	background-color: rgba(from var(--color-4) r g b / 0.7);
+}
+.autoformat > div:nth-child(2n) picture:nth-child(5n + 1) img {
+	background-color: var(--color-3);
+}
+.autoformat > div:nth-child(2n) picture:nth-child(5n + 2) img {
+	background-color: var(--color-f);
+}
+.autoformat > div:nth-child(2n) picture:nth-child(5n + 3) img {
+	background-color: rgba(from var(--color-4) r g b / 0.7);
+}
+.autoformat > div:nth-child(2n) picture:nth-child(5n + 4) img {
+	background-color: var(--color-4);
+}
+.autoformat > div:nth-child(2n) picture:nth-child(5n) img {
+	background-color: var(--color-1);
+}

@@ -1,0 +1,52 @@
+:root{
+	--color-f: #ffffff;
+	--color-0: #000000;
+	--color-1: #353738;
+	--color-2: #504e4e;
+	--color-3: #999999;
+	--color-4: #ea3232;
+	--color-5: #252728;
+	--color-6: #555555;
+	--color-7: #777777;
+	--blank: #00000000;
+	--text-color: var(--color-f);
+}
+header {
+	--logo-margin-top: 2vh;
+	--logo-height: calc(var(--header-height) - var(--nav-height) - var(--logo-margin-top));
+	--background-color: var(--color-1);
+	--button-color: var(--color-2);
+	--nav-color: var(--color-3);
+}
+main {
+	--main-color: var(--color-1);
+	--accent-color: var(--color-4);
+	--button-color: var(--color-2);
+	--mobile-width: 70vh;
+	--h2-font-size: min(7vw, 35px);
+	--p-font-size: min(4.5vw, 25px);
+}
+footer {
+	--footer-height: 30vh;
+	--background-color:  var(--color-5);
+	--nav-color: var(--color-6);
+	--accent-color: var(--color-3);
+	--button-color: var(--color-1);
+	--info-title-size: calc(var(--a-font-size) * 1.2);
+	--call-size: calc(var(--h1-font-size) * 0.9);
+	--hours-size: calc(var(--h1-font-size) * 0.8);
+	--socials-size: calc(var(--a-font-size) * 0.9);
+}
+header, main {
+	--header-height: 30vh;
+	--nav-height: 13vh;
+}
+header, footer {
+	--h1-font-size: min(4vh, 10vw);
+	--a-font-size: min(4vw, 2vh);
+}
+#span, #span-img {
+	--span-height: 50vw;
+	--max-span-gap: 20vh;
+	--span-font-size: 8vmin;
+}

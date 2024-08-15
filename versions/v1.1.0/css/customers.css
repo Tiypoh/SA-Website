@@ -1,0 +1,53 @@
+.spanbg {
+	width: 100vw;
+	height: 100vh;
+}
+section {
+	padding: 5vw 0;
+}
+section > div {
+	padding: 2.5vw 10vw;
+}
+span {
+	font-family: luloclean;
+	font-size: 8vmin;
+	color: var(--text-color);
+	letter-spacing: 3vmin;
+	margin: auto;
+}
+p {
+	background-color: rgba(from var(--h2-text-color) r g b / 0.4);
+}
+.autoformat  > img {
+	padding: 5%;
+	margin: auto;
+	width: 85%;
+}
+.autoformat > img:hover {
+	transform: scale(1.17);
+}
+.autoformat > img:nth-child(5n + 1) {
+	background-color: var(--accent-color);
+}
+.autoformat > img:nth-child(5n + 2) {
+	background-color: var(--header-color);
+}
+.autoformat > img:nth-child(5n + 3) {
+	background-color: var(--text-color);
+}
+.autoformat > img:nth-child(5n + 4) {
+	background-color: rgba(from var(--accent-color) r g b / 0.7);
+}
+.autoformat > img:nth-child(5n) {
+	background-color: var(--nav-color);
+}
+@media (min-width: 120vh) {
+	.autoformat {
+		grid-template-columns: auto auto;
+	}
+}
+@media (max-width: 120vh) {
+	.autoformat {
+		grid-template-columns: auto;
+	}
+}

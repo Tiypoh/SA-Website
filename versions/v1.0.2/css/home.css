@@ -1,0 +1,12 @@
+#map {
+	height: 82.1vh;
+	width: 100%;
+}
+.bg {
+	padding-bottom: 0;
+}
+.span > img {
+	margin: 10% auto;
+	min-height: 20vh;
+	max-height: 80%;
+}

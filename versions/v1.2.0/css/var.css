@@ -1,0 +1,24 @@
+:root{
+	--accent-color: #ea3232;
+	--header-color: #353738;
+	--footer-color: #252728;
+	--nav-color: #999999;
+	--button-color: #504e4e;
+	--text-color: #ffffff;
+	--button-text-color: #ffffff;
+	--h2-bg-color: #ffffff;
+	--h2-text-color: #555555;
+	--mobile-width: 70vh;
+	--nav-height: 13vh;
+	--logo-height: 15vh;
+	--logo-margin-top: 2vh;
+	--header-height: calc(var(--nav-height) + var(--logo-height) + var(--logo-margin-top));
+	--footer-height: 30vh;
+	--span-height: 50vw;
+	--max-span-gap: 20vh;
+	--span-font-size: 8vmin;
+	--h1-font-size: min(4vh, 10vw);
+	--h2-font-size: min(7vw, 35px);
+	--p-font-size: min(4.5vw, 25px);
+	--a-font-size: min(4vw, 2vh);
+}

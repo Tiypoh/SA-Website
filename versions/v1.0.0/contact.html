@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link type="image/png" href="pics/frontlogo.png" rel="icon">
+	<link rel="stylesheet" href="website.css">
+	<meta name=keywords content="Performance Mechanic">
+	<meta name=author content="DESAD Tech Group - Kyle Sebring">
+	<title>Sebring Automotive</title>
+	<script src="map.js"></script>
+</head>
+<body>
+	<header>
+		<img src="pics/frontlogo.png" height=100px style="margin-bottom:-20px;">
+		<div>
+			<h1>Sebring Automotive</h1>
+			<a href="index.html">Home</a>
+			<a href="services.html">Services</a>
+			<a href="projects.html">Our Projects</a>
+			<a href="contact.html">Find Us</a>
+		</div>
+	</header>
+	<main class="contact">
+		<div style="grid-column: 1 / span 3;">
+			<span style="background-color:#ffffff00;color:white;">Get in touch with us</span>
+		</div>
+		<div>
+			<div id="map">
+			</div>
+			<script async
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeOWrX-vd2tyOuYiZyc1FBi1Wmum4sgzw&loading=async&callback=initMap">
+			</script>
+		</div>
+		<div style="background-color: #ea3232b0;">
+			<h4>Meet us</h4>
+			<p>CALL US at (520) 603-8630<br><br>EMAIL US at kylewsebring@gmail.com<br><br>VISIT US at 861 W. Thurber St., Tucson AZ</p>
+		</div>
+		<div style="background-color: #ea3232;">
+			<h4>Contact us</h4>
+			<form action="contact.php" method="post" enctype="multipart/form-data" name="contactform">
+				<label for="name">Hello, my name is</label>
+				<input type="text" id="name" name="name" placeholder="your name" required>
+				<label for="email">and my email address is</label>
+				<input type="email" id="email" name="email" placeholder="your email" required>
+				<label for="message">and I would like to ask about</label>
+				<input type="text" id="message" name="message" placeholder="your question" required><br>
+				<input type="submit" id="submit" value="Submit">
+			</form>
+		</div>
+	</main>
+</body>
+</html>

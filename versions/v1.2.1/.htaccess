@@ -1,0 +1,16 @@
+RewriteEngine on
+ErrorDocument 404 /resources/404.html
+
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://sebringautomotive.shop/$1 [R]
+RewriteRule ^home$ / [R=301,L]
+RewriteRule ^services/$ /services/ourservices [L]
+RewriteRule ^cars/$ /cars/shopcars [L]
+
+
+RewriteRule ^services$ /services/ourservices [R=301,L]
+RewriteRule ^projects$ /cars/shopcars [R=301,L]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [L]

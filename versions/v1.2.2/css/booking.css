@@ -1,0 +1,16 @@
+#span {
+	height: 15vh;
+	min-height: 15vh;
+}
+#span-img, #span-img img {
+	height: 100vh;
+	object-fit: cover;
+}
+#main {
+	padding: 0;
+}
+iframe {
+	height: calc(100vh - var(--nav-height));
+	width: 100vw;
+	background-color: rgba(from var(--color-f) r g b / 0.3);
+}

@@ -1,0 +1,15 @@
+.actionbutton > h2 {
+	color: var(--text-color);
+	background-color: #00000000;
+}
+.actionbutton > h2 > a {
+	font-size: 6vmin;
+	text-decoration: none;
+	color: var(--text-color);
+	background-color: rgba(from var(--header-color) r g b / 0.5);
+	padding: 3vmin 12vmin;
+}
+.actionbutton > h2 > a:hover {
+	color: var(--nav-color);
+	background-color: #00000000;
+}

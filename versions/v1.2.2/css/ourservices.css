@@ -1,0 +1,9 @@
+.autoformat, .autoformat > div {
+	display: grid;
+    grid-gap: 5vw;
+}
+@media (min-width: 100vh) {
+	.autoformat {
+		grid-template-columns: auto auto;
+	}
+}

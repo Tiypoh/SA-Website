@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteRule ^about$ contact [NC]
+RewriteRule ^index$ [R=301]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . / [R=404]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://sebringautomotive.shop/$1 [R]
+ErrorDocument 404 /404

@@ -1,0 +1,97 @@
+header {
+	height: var(--header-height);
+	background-color: var(--background-color);
+	color: var(--color-f);
+	width: 100vw;
+	z-index: 2;
+	position: sticky;
+	top: calc(-1*(var(--logo-height) + var(--logo-margin-top)));
+}
+header > a {
+	width: 100%
+}
+header img {
+	height: var(--logo-height);
+	margin-top: var(--logo-margin-top);
+}
+header h1 {
+	margin: -1vh 0 1vh;
+	font-size: var(--h1-size);
+}
+header > nav .sub {
+	display: none;
+}
+header > nav p:hover + div,
+header > nav div:hover {
+	display: grid;
+	grid-template-rows: auto auto;
+}
+
+/*desktop nav*/
+@media (min-width: 80vh) {
+	header > nav a, 
+	header > nav p {
+		color: var(--text-color);
+		background-color: var(--button-color);
+		font-size: var(--a-size);
+		text-decoration: none;
+		padding: 1vh;
+	}
+	header > nav a:hover,
+	header > nav p:hover {
+		color: var(--button-color);
+		background-color: var(--text-color);
+	}
+	header .main {
+		height: calc(var(--a-size) + 1vh);
+		background-color: var(--nav-color);
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: auto auto;
+		grid-row-gap: 0;
+		grid-column-gap: 1vw;
+		padding: 0 20vw;
+	}
+	header .main > a,
+	header .main > p {
+		margin: -1vh 0 0;
+	}
+	header .sub {
+		display: none;
+		grid-row: 2 / 3;
+	}
+	header #nav-services {
+		grid-column: 2 / 3;
+	}
+	header #nav-cars {
+		grid-column: 3 / 4;
+	}
+	header > nav > p {
+		display: none;
+	}
+}
+/*mobile nav*/
+@media (max-width: 80vh) {
+	header nav a,
+	header nav p {
+		padding: 1vh 0;
+		font-size: 3vh;
+		margin: 0;
+		font-family: luloclean;
+		text-decoration: none;
+		color: var(--color-f);
+		background-color: var(--button-color);
+	}
+	header > nav div {
+		display: none;
+	}
+	header > nav .sub a {
+		background-color: var(--nav-color);
+	}
+	header > nav > a,
+	header > nav > p {
+		display: block;
+		padding: 0.5vh 0;
+		font-size: 2vh;
+	}
+}

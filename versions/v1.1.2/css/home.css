@@ -1,0 +1,42 @@
+#map {
+	height: 82.1vh;
+	width: 100vw;
+	padding: 0;
+	color: #000000;
+}
+#map-label > p {
+	font-size: 12pt;
+	margin: 0;
+	max-width: 100%;
+}
+#map-label > a {
+	font-size: 10pt;
+	margin: 0;
+	max-width: 100%;
+}
+.span > picture > img {
+	height: 40vw;
+	min-height: calc(0.8 * 50vh);
+	max-height: calc(0.8 * 70vh);
+	max-width: 90vw;
+	object-fit: contain;
+}
+.display {
+	display: inline-block;
+	padding: 1vh 5vh;
+	margin: 3vh;
+}
+.hidden {
+	display: none;
+	overflow: hidden;
+}
+.btn {
+	text-decoration: none;
+	font-size: var(--p-font-size);
+	background-color: var(--button-color);
+	color: var(--a-text-color)
+}
+.btn:hover {
+	background-color: var(--header-color);
+	color: var(--a-text-color);
+}

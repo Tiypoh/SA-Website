@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /desad
+
+User-agent: AdsBot-Google
+Disallow: /contact.php
+
+Sitemap: https://sebringautomotive.shop/sitemap.xml
+Sitemap: https://www.sebringautomotive.shop/sitemap.xml

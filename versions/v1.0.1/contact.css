@@ -1,0 +1,72 @@
+h2 {
+	margin: auto;
+	font-family: luloclean;
+	font-size: 30px;
+	background-color: #ffffff00;
+	color: #ffffff;
+}
+.span {
+	height: 30vh;
+}
+.spanbg {
+	height: 100vh;
+}
+.spanbg > img {
+	height: 100vh;
+	object-fit: cover;
+}
+.autoformat {
+	font-size: 20px;
+}
+.autoformat > div {
+	padding: 70px 10%;
+}
+@media (max-width: 1200px) {
+	.autoformat {
+		grid-template: 50vw 50vw 50vw / 100%;
+	}
+}
+@media (min-width: 1200px) {
+	.autoformat {
+		grid-template: 51vh / 33% 34% 33%;
+	}
+}
+form {
+	max-width: 500px;
+	margin: auto;
+}
+input {
+	font-size: 20px;
+	font-family: avenir;
+	background-color: #ea3232;
+	border: 0;
+}
+input:-internal-autofill-selected {
+	background-color: #994bc9;
+}
+textarea {
+	font-size: 20px;
+	font-family: avenir;
+	background-color: #ea3232;
+	border: 0;
+}
+textarea:-internal-autofill-selected {
+	background-color: #994bc9;
+}
+::placeholder {
+	color: #ffffffc0;
+}
+#message {
+	width: 100%;
+	height: 100px;
+}
+#submit {
+	margin: 10px;
+	padding: 2px;
+	border: 3px solid black;
+}
+#map {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+}

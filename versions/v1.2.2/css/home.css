@@ -1,0 +1,27 @@
+#span img {
+	height: 40vw;
+	min-height: calc(0.8 * 50vh);
+	max-height: calc(0.8 * 70vh);
+	max-width: 90vw;
+	object-fit: contain;
+}
+#map {
+	height: 82.1vh;
+	padding: 0;
+}
+#map-label p {
+	font-size: 12pt;
+	margin: 0;
+	max-width: 100%;
+	color: var(--color-0)
+}
+#map-label a {
+	font-size: 10pt;
+	margin: 0;
+	max-width: 100%;
+	color: #00f;
+	text-decoration: underline;
+}
+#map .gm-style-cc {
+	display: none;
+}

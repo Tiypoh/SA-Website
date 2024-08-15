@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-73R4GP4KRB"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-73R4GP4KRB');
+	</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="thumbnail" content="../pics/frontlogobg.webp">
+	<meta name="geo.position" content="32.2735; -110.98621">
+	<meta name="geo.placename" content="Tucson, AZ">
+	<meta name="geo.region" content="US-AZ">
+	<meta name="description" content="Featured pictures of our best customers' cars">
+	<meta name=keywords content="Tucson, Mechanic, Shop, Garage, Repair, Auto, Automotive, Performance">
+	<meta name=author content="DESAD Tech Group - Kyle Sebring">
+	<title>Sebring Automotive - Customers</title>
+	<link type="image/webp" href="../pics/icon.webp" rel="icon">
+	<link type="image/png" href="../pics/icon.png" rel="icon">
+	<link rel="stylesheet" href="../css/website.css">
+	<link rel="stylesheet" href="../css/nav.css">
+	<link rel="stylesheet" href="../css/fonts.css">
+	<link rel="stylesheet" href="../css/customers.css">
+</head>
+<body>
+	<div class="spanbg">
+		<picture>
+			<source media="(min-height: 721px)" type="image/webp" srcset="../pics/shop.webp">
+			<source media="(min-height: 481px) and (max-height: 720px)" type="image/webp" srcset="../pics/shop720.webp">
+			<source media="(max-height: 480px)" type="image/webp" srcset="../pics/shop480.webp">
+			<source media="(min-height: 721px)" type="image/jpeg" srcset="../pics/shop.jpg">
+			<source media="(min-height: 481px) and (max-height: 720px)" type="image/jpeg" srcset="../pics/shop720.jpg">
+			<source media="(max-height: 480px)" type="image/jpeg" srcset="../pics/shop480.jpg">
+			<img src="../pics/shop.jpg" alt="Inside of Sebring Automotive">
+		</picture>
+	</div>
+	<header>
+		<a href="../home"><picture>
+			<source type="image/webp" srcset="../pics/frontlogo.webp">
+			<source type="image/jpeg" srcset="../pics/frontlogo.png">
+			<img src="../pics/frontlogo.png" alt="Logo AW11 Front">
+		</picture></a>
+		<a href="../home"><h1>Sebring Automotive</h1></a>
+		<a id="menu">Menu</a>
+		<nav>
+			<a href="../home">Home</a>
+			<a id="services">Services</a>
+			<div class="dropdown services">
+				<a href="../services/ourservices">Our Services</a>
+				<a href="../services/booking">Booking</a>
+			</div>
+			<a id="cars">Cars</a>
+			<div class="dropdown cars">
+				<a href="../cars/shopcars">Shop Cars</a>
+				<a href="../cars/customers">Customer Cars</a>
+			</div>
+			<a href="../contact">Contact</a>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<span>Customer Cars</span>
+			<div>
+				<p>These are pictures of some of our best customer's cars for you to check out!</p>
+				<p>If youd like to see your car on here, ask us next time youre at the shop to have your picture taken, or email us a picture of your car to website@sebringautomotive.shop. To qualify you must have had at least one service performed by us at our shop.</p>
+			</div>
+			<div class="autoformat">
+				<img src="../pics/customers/bmw335d.jpg" alt="2011 BMW 335d Tuned">
+				<img src="../pics/customers/g35.jpg" alt="2006 Infiniti G35">
+				<img src="../pics/customers/raptor330i.jpg" alt="2017 Ford Raptor Tuned">
+				<img src="../pics/customers/sw20.jpg" alt="1999 JDM Toyota MR2">
+				<img src="../pics/customers/minicoop.jpg" alt="2006 Mini Cooper">
+				<img src="../pics/customers/doubleminicoop.jpg" alt="2006 & 2008 Mini Cooper">
+				<img src="../pics/customers/mercglc.jpg" alt="2019 Mercedes GLC">
+				<img src="../pics/customers/2021chevy1973chevy.jpg" alt="2021 GMC Sierra & 1973 Chevy Squarebody">
+				<img src="../pics/customers/fordchevy.jpg" alt="F-150 and Squarebody">
+				<img src="../pics/customers/s10c10.jpg" alt="1971 Chevy C10 & 2000 Chevy S10">
+				<img src="../pics/customers/mr2motorpull.jpg" alt="1987 MR2 Motor Pull">
+				<img src="../pics/customers/accord.jpg" alt="2001 Accord Wheel Pulled Out">
+            </div>
+		</section>
+	</main>
+	<footer>
+		<a id="menu">Menu</a>
+		<nav>
+			<a href="home">Home</a>
+			<a href="services/ourservices">Our Services</a>
+			<a href="services/booking">Booking</a>
+			<a href="cars/shopcars">Shop Cars</a>
+			<a href="cars/customers">Customer Cars</a>
+			<a href="contact">Contact</a>
+		</nav>
+		<div class="footer-content info">
+			<div id="hours">
+				<p>Hours</p>
+				<h1>Mon to Fri - 9am to 6pm</h1>
+			</div>
+			<div id="call">
+				<p>Call now</p>
+				<a href="tel:520-222-8002"><h1>(520) 888-8002</h1></a>
+			</div>
+			<div id="socials">
+				<p>Social Media</p>
+				<a href="https://www.youtube.com/@sebringautomotive" target="_blank">YouTube</a>
+				<a href="https://www.tiktok.com/@ksebring" target="_blank">TikTok</a>
+				<a href="https://www.instagram.com/kylewsebring/" target="_blank">Instagram</a>
+			</div>
+		</div>
+		<div class="footer-content copyright">
+			<h3>Copyright 2024 by Kyle Sebring</h3>
+			<h3>Sebring Automotive LLC</h3>
+			<h3>861 W. Thurber Rd. Tucson, AZ 85705</h3>
+		</div>
+	</footer>
+</body>
+</html>

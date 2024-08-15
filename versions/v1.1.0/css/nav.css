@@ -1,0 +1,120 @@
+/*desktop nav*/
+@media (min-width: 70vh) {
+	.desktop {
+		display: block;
+	}
+	.mobile {
+		display: none;
+	}
+	nav {
+		height: calc(var(--a-font-size) + 1vh);
+		background-color: var(--nav-color);
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		grid-template-rows: auto auto;
+		grid-row-gap: 0;
+		grid-column-gap: 1vw;
+		padding: 0 20vw;
+	}
+	.sub-pages {
+		display: none;
+		overflow: hidden;
+		height: 0;
+		grid-row-start: 2;
+	}
+	.services {
+		grid-column-start: 2;
+	}
+	.cars {
+		grid-column-start: 3;
+	}
+	nav > a,
+	.sub-pages > a {
+		font-size: var(--a-font-size);
+		text-decoration: none;
+		padding: 1vh;
+	}
+	nav > a {
+		margin-top: -1vh;
+		color: var(--text-color);
+		background-color: var(--button-color);
+	}
+	nav > a:hover {
+		color: #000000;
+		background-color: var(--text-color);
+	}
+	.sub-pages > a {
+		color: var(--header-color);
+		background-color: var(--text-color);
+	}
+	.sub-pages > a:hover {
+		color: var(--text-color);
+		background-color: var(--header-color);
+	}
+	#services:hover ~ .services,
+	.services:hover {
+		display: grid;
+		grid-template-rows: auto auto;
+		height: calc(2 * (var(--a-font-size) + 3vh));
+	}
+	#cars:hover ~ .cars,
+	.cars:hover {
+		display: grid;
+		grid-template-rows: auto auto;
+		height: calc(2 * (var(--a-font-size) + 3vh));
+	}
+}
+/*mobile nav*/
+@media (max-width: 70vh) {
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+	.mobile > a,
+	nav > a,
+	.sub-pages > a {
+		height: 4vh;
+		padding: 1vh 0;
+		font-size: 3vh;
+		margin: 0;
+		font-family: luloclean;
+		width: 100vw;
+		text-decoration: none;
+		color: var(--text-color);
+		background-color: var(--button-color);
+	}
+	#menu {
+		display: grid;
+		height: 4vh;
+		padding: 1vh 0;
+		font-size: 3vh;
+	}
+	nav, .sub-pages {
+		display: none;
+		overflow: hidden;
+		height: 0;
+		width: 100vw;
+	}
+	.sub-pages > a {
+		background-color: var(--header-color);
+	}
+	#menu:hover ~ nav,
+	nav:hover {
+		display: grid;
+		height: auto;
+	}
+	#services:hover ~ .services,
+	.services:hover {
+		display: grid;
+		grid-template-rows: 6vh 6vh;
+		height: 12vh;
+	}
+	#cars:hover ~ .cars,
+	.cars:hover {
+		display: grid;
+		grid-template-rows: 6vh 6vh;
+		height: 12vh;
+	}
+}

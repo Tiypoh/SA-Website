@@ -1,0 +1,49 @@
+.autoformat, .autoformat > div {
+	display: grid;
+    grid-gap: 5vw;
+}
+@media (min-width: 100vh) {
+	.autoformat {
+		grid-template-columns: auto auto;
+	}
+}
+.actionbutton > h2 {
+	color: var(--text-color);
+	background-color: #00000000;
+}
+.actionbutton > h2 > a {
+	font-size: 6vmin;
+	text-decoration: none;
+	color: var(--text-color);
+	background-color: rgba(from var(--header-color) r g b / 0.5);
+	padding: 3vmin 12vmin;
+}
+.actionbutton > h2 > a:hover {
+	color: var(--nav-color);
+	background-color: #00000000;
+}
+.section {
+	display: block;
+	padding: 0;
+	margin: 2vw auto;
+}
+.toggle {
+	display: inline-block;
+	margin: 2vh;
+	padding: 1vh 5vh;
+	border: 0;
+	font-family: avenirlight, sans-serif;
+	text-decoration: none;
+	font-size: var(--p-font-size);
+	background-color: var(--button-color);
+	color: var(--a-text-color)
+}
+.toggle:hover {
+	background-color: var(--nav-color);
+}
+.hidden {
+	display: none;
+	overflow: hidden;
+}
+.display {
+}

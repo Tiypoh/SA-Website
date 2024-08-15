@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /*.php$
+Disallow: /desad
+
+Sitemap: https://sebringautomotive.shop/sitemap.xml
+Sitemap: https://www.sebringautomotive.shop/sitemap.xml

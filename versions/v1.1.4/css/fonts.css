@@ -1,0 +1,28 @@
+@font-face {
+	font-family: avenir;
+	src: url(fonts/Avenir/Avenir.ttf)
+}
+@font-face {
+	font-family: avenirlight;
+	src: url(fonts/Avenir/AvenirLight.ttf)
+}
+@font-face {
+	font-family: avenirbold;
+	src: url(fonts/Avenir/AvenirBold.ttf)
+}
+@font-face {
+	font-family: opensans;
+	src: url(fonts/OpenSans/OpenSans-Regular.ttf)
+}
+@font-face {
+	font-family: opensanslight;
+	src: url(fonts/OpenSans/OpenSans-Light.ttf)
+}
+@font-face {
+	font-family: opensansbold;
+	src: url(fonts/OpenSans/OpenSans-Bold.ttf)
+}
+@font-face {
+	font-family: luloclean;
+	src: url(fonts/LuloClean.ttf)
+}

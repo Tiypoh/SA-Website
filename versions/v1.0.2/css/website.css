@@ -1,0 +1,123 @@
+main::-webkit-scrollbar {
+	display: none;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+p {
+	max-width: min(90%, 1000px);
+	margin: 2vw auto;
+	font-size: min(4.5vw, 25px);
+	font-family: avenir;
+}
+h1 {
+	
+}
+h2 {
+	background-color: #ffffff;
+	font-size: min(7vw, 35px);
+	color: #555555;
+	padding: 1vh 3vh;
+	margin: 0 auto 3vh;
+	display: inline-flex;
+}
+hr {
+	border: 1px solid white;
+	margin: 4.5vh auto -4.5vh;
+	width: 99%;
+	height: 0;
+}
+body {
+	margin: 0;
+	text-align: center;
+	color: #ffffff;
+	font-family: avenirlight, sans-serif;
+}
+header {
+	height: 35vh;
+	background: #353738;
+	color: white;
+	width: 100%;
+	z-index: 1;
+	position: sticky;
+	top: -17vh;
+}
+header > nav {
+	background-color: #999999;
+	margin-top: -0.5vh;
+}
+header > img {
+	height: 15vh;
+	margin-top: 2vh;
+}
+header > h1 {
+	margin-top: 0;
+	margin-bottom: 2vh;
+	font-size: 5vh;
+}
+a {
+	color: white;
+	margin: 1vh;
+	padding: 1vh;
+	background-color: #504e4e;
+	font-size: min(3vh, 22px);
+	text-decoration: none;
+}
+a:hover {
+	color: black;
+	background-color: #ffffff;
+}
+main {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	display: grid;
+	position: relative;
+}
+.spanbg {
+	position: fixed;
+	overflow: hidden;
+	width: 100%;
+	height: calc(50vw + 18vh);
+	min-height: 58vh;
+	max-height: 83vh;
+	margin-top: 17vh;
+}
+.spanbg > img {
+	width: 100vw;
+	height: 100%;
+	object-fit: cover;
+}
+.span {
+	height: 50vw;
+	min-height: 40vh;
+	max-height: 65vh;
+	align-items: center;
+	justify-content: center;
+	display: grid;
+}
+.span > span {
+	font-family: luloclean;
+	font-size: 8vmin;
+	color: #ffffff;
+	letter-spacing: 3vmin;
+	margin: auto;
+}
+.bg {
+	background-image: url('../pics/sunsetbg.webp');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 5vw 0;
+	width: 100vw;
+}
+.bg > div {
+	padding: 2.5vw 10vw;
+}
+.autoformat {
+	display: grid;
+    grid-gap: 5vw;
+}
+@media (min-width: 100vh) {
+	.autoformat {
+		grid-template-columns: auto auto;
+	}
+}

@@ -1,0 +1,49 @@
+To do list:
+	- Set up alternative sizes for project images
+	- Add more services
+	- Add explicit width and height to images for aspect ratio
+	- Add more SEO words
+	- Disallow .html requests
+	- Fix button spacing on map
+	- Find a better way to color car pics
+	- Fix touch target issues with mobile nav
+	- Optimize image loading especially for mobile
+
+Done list:
+	- Set up completion message on contact form
+	- Improve mobile format to work on small mobile devices
+	- Add link to home for the header logo and text
+	- Set up webp images properly
+	- Set up alternative to webp thumbnail
+	- Tie google maps marker to business (as best as possible with googles limits afaik)
+	- Add a page for customer cars
+	- Set frontlogo to png for alternative
+	- Set up variables for css
+	- Add a booking form page
+	- Add checks to make sure the form has been completed
+	- Improved nav menu for mobile
+	- Make a drop down nav menu for mobile
+	- Make pictures clickable on project pages (kinda, they enlarge when you hover)
+	- Change "Find Us" to "Contact" in nav
+	- Add SEO words to pages (home)
+	- Add footer
+	- Add SEO words to pages
+	- Expand on services
+	- Turn toggle <a> into <button>
+	- Set up HTTP/2
+	- Set up text compression
+	- Set up brotli
+	- Set up html contact form delivery
+	- Set up cache control
+	- Set up server side includes
+	- Separate header/footer files
+	- Automatic lastmod on sitemap
+	- Add "This page last modified <!--#echo var="LAST_MODIFIED" -->"
+	- Organize and minify header/footer code
+	- Minify CSS
+	- Restructure variables
+	- Shrink html form response text size
+	- Add headings
+	- Set up sans-serif fallback for text
+	- Restructure html tags and css styles properly
+	- Change duplicate #menus

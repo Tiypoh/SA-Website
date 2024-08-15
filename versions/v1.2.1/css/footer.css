@@ -1,0 +1,125 @@
+footer {
+	min-height: var(--footer-height);
+	background-color: var(--background-color);
+	color: var(--color-f);
+	padding-bottom: 2vh;
+	margin-top: -2vh;
+	width: 100vw;
+	z-index: 1;
+	position: relative;
+}
+footer > nav {
+	background-color: var(--nav-color);
+	margin: 1vh 0;
+}
+footer > nav > a,
+footer > #menu {
+	color: var(--text-color);
+	background-color: var(--button-color);
+}
+footer > nav > a:hover {
+	color: var(--header-color);
+	background-color: var(--accent-color);
+}
+footer > div {
+	display: grid;
+	margin: 2vh;
+}
+.info-title {
+	font-size: var(--info-title-size);
+}
+.info-btn {
+	font-size: var(--call-size);
+	font-weight: 700;
+	text-decoration: none;
+	margin: auto 1vh;
+}
+.call-btn:hover,
+.social-btn:hover {
+	font-family: avenirbold;
+}
+.call-btn {
+	font-size: var(--call-size);
+}
+.map-btn {
+	font-size: var(--hours-size);
+}
+.social-btn {
+	font-size: var(--socials-size);
+	font-weight: 100;
+}
+#socials {
+	display: grid;
+	grid-template-columns: 100%;
+}
+#lastmod,
+#copyright > p {
+	font-size: 1.5vh;
+	color: var(--accent-color);
+	margin: 0 1vw;
+	display: inline-block;
+}
+
+/*desktop nav*/
+@media (min-width: 80vh) {
+	footer > nav {
+		display: block;
+		padding: 0;
+	}
+	footer > nav > a {
+		padding: 0 1vh;
+		margin: 0 1vh;
+		font-size: var(--a-font-size);
+		text-decoration: none;
+	}
+	footer > #menu {
+		display: none;
+	}
+	#call {
+		grid-column-start: 2;
+	}
+	#info {
+		grid-template-columns: 3fr 4fr 3fr;
+		grid-template-rows: auto;
+	}
+	#socials > p {
+		margin-bottom: 1vh;
+	}
+	#copyright {
+		display: flex;
+		width: auto;
+		justify-content: center
+	}
+}
+
+/*mobile nav*/
+@media (max-width: 80vh) {
+	.footer > div {
+		grid-template-columns: auto;
+		grid-template-rows: repeat(3, auto);
+	}
+	footer > nav {
+		display: none;
+	}
+	footer > nav > a,
+	footer > #menu {
+		padding: 1vh 0;
+		font-size: 3vh;
+		margin: 0;
+		font-family: luloclean;
+		text-decoration: none;
+	}
+	footer > #menu {
+		display: block;
+		padding: 0.5vh 0;
+		font-size: 2vh;
+	}
+	footer > #menu:hover ~ nav,
+	footer > nav:hover {
+		display: grid;
+		height: auto;
+	}
+	#call {
+		grid-row-start: 1;
+	}
+}

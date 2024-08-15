@@ -1,0 +1,14 @@
+#map {
+	height: 82.1vh;
+	width: 100%;
+}
+.bg {
+	padding-bottom: 0;
+}
+.span > picture > img {
+	height: 40vw;
+	min-height: calc(0.8 * 50vh);
+	max-height: calc(0.8 * 70vh);
+	max-width: 90vw;
+	object-fit: contain;
+}

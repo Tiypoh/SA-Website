@@ -1,0 +1,10 @@
+#map {
+	height: 50vh;
+	width: 100%;
+	margin-bottom: -50px;
+}
+.span > img {
+	margin: 10% auto;
+	min-height: 20vh;
+	max-height: 80%;
+}

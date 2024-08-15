@@ -1,0 +1,108 @@
+h2 {
+	margin: auto;
+	font-family: luloclean;
+	background-color: #00000000;
+	color: var(--text-color);
+}
+.span {
+	height: 30vh;
+}
+.spanbg {
+	height: 100vh;
+}
+.spanbg > img {
+	height: 100vh;
+	object-fit: cover;
+}
+.autoformat {
+	display: grid;
+    grid-gap: 0;
+}
+.autoformat > div {
+	padding: 5vh 0;
+}
+@media (max-width: 150vh) {
+	.autoformat {
+		grid-template: auto auto / 100vw;
+		font-size: min(4.5vw, 25px);
+	}
+	#map {
+		min-height: 82vh;
+	}
+	input {
+		font-size: min(4.5vw, 25px);
+	}
+	textarea {
+		font-size: min(4.5vw, 25px);
+	}
+}
+@media (min-width: 150vh) {
+	.autoformat {
+		grid-template-columns: 33vw 34vw 33vw;
+		font-size: min(1.5vw, 25px);
+	}
+	p {
+		font-size: min(1.5vw, 25px);
+	}
+	input {
+		font-size: min(1.5vw, 25px);
+	}
+	textarea {
+		font-size: min(1.5vw, 25px);
+	}
+}
+form {
+	max-width: 80%;
+	margin: auto;
+}
+input {
+	font-family: avenir;
+	background-color: var(--accent-color);
+	border: 0;
+}
+input:-internal-autofill-selected {
+	background-color: var(--accent-color);
+}
+textarea {
+	font-family: avenir;
+	background-color: var(--accent-color);
+	border: 0;
+}
+textarea:-internal-autofill-selected {
+	background-color: var(--accent-color);
+}
+::placeholder {
+	color: var(--text-color);
+	opacity: 65%;
+}
+#message {
+	width: 100%;
+	height: 100px;
+}
+#submit {
+	margin: 10px;
+	padding: 2px;
+	border: 3px solid black;
+}
+#map {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	color: #000000;
+}
+#map-label > p {
+	font-size: 12pt;
+	margin: 0;
+	max-width: 100%;
+}
+#map-label > a {
+	font-size: 10pt;
+	margin: 0;
+	max-width: 100%;
+}
+#info {
+	background-color: rgba(from var(--accent-color) r g b / 0.7);
+}
+#form {
+	background-color: var(--accent-color);
+}

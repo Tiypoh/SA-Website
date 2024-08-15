@@ -1,0 +1,111 @@
+/* website.css */
+:root{
+	--accent-color: #ea3232;
+	--header-color: #353738;
+	--footer-color: #252728;
+	--nav-color: #999999;
+	--button-color: #504e4e;
+	--text-color: #ffffff;
+	--button-text-color: #ffffff;
+	--h2-bg-color: #ffffff;
+	--h2-text-color: #555555;
+	--mobile-width: 70vh;
+	--nav-height: 6vh;
+	--logo-height: 15vh;
+	--logo-margin-top: 2vh;
+	--header-height: calc(var(--nav-height) + var(--logo-height) + var(--logo-margin-top));
+	--footer-height: 6vh;
+	--span-height: 50vw;
+	--max-span-gap: 20vh;
+	--span-font-size: 4vmin;
+	--h1-font-size: min(4vh, 10vw);
+	--h2-font-size: min(7vw, 35px);
+	--p-font-size: min(4.5vw, 25px);
+	--a-font-size: min(4vw, 2vh);
+}
+h3 {
+	font-size: 1.5vh;
+	color: var(--nav-color);
+	margin: 2vw 1vw;
+	display: inline-block;
+}
+hr {
+	border: 1px solid white;
+	margin: 4.5vh auto -4.5vh;
+	width: 99%;
+	height: 0;
+}
+#body {
+	margin: 0;
+	text-align: center;
+	color: var(--text-color);
+	background-color: #000000;
+	font-family: avenirlight, sans-serif;
+	overflow-x: hidden;
+}
+#logo > picture > img {
+	height: var(--logo-height); margin-top: var(--logo-margin-top);
+}
+#name > h1 {
+	margin: -1vh 0 1vh; font-size: var(--h1-font-size);
+}
+#main {
+	min-height: calc(100vh - 23vh - 6vh); align-items: center; justify-content: center; display: grid; background-image: url('https://sebringautomotive.shop/pics/lineup.jpg') center; background-repeat: no-repeat; background-size: cover;
+}
+span {
+	font-family: avenirlight;
+	font-size: 4vmin;
+	color: #ffffff;
+	margin: auto;
+	width: auto;
+	padding-left: 4vmin;
+}
+
+/* nav.css */
+#header {
+	height: 23vh; background-color: #353738; color: #ffffff; width: 100vw; z-index: 2; position: sticky; top: -17vh;
+}
+#header > a {
+	text-decoration: none; color: white;
+}
+#footer {
+	min-height: var(--footer-height);
+	background-color: var(--footer-color);
+	color: var(--text-color);
+	padding-bottom: 2vh;
+	margin-top: -2vh;
+	width: 100vw;
+	z-index: 1;
+	position: relative;
+	height: auto;
+}
+#copywright {
+ 
+}
+/*desktop nav*/
+@media (min-width: 80vh) {
+	#copyright {
+		display: flex; margin: 2vh; width: auto; justify-content: center;
+	}
+}
+/*mobile nav*/
+@media (max-width: 80vh) {
+	#copywright {
+		grid-template-columns: auto;
+		grid-template-rows: repeat(3, auto);
+	}
+}
+
+/* fonts.css */
+@font-face {
+	font-family: avenirlight;
+	src: url(fonts/Avenir/AvenirLight.ttf)
+}
+@font-face {
+	font-family: avenirbold;
+	src: url(fonts/Avenir/AvenirBold.ttf)
+}
+@font-face {
+	font-family: luloclean;
+	src: url(fonts/LuloClean.ttf)
+}

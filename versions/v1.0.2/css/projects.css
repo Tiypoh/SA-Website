@@ -1,0 +1,15 @@
+.autoformat > img {
+	background-color: Grey;
+	padding: 3vw;
+	margin: auto;
+	width: 75%;
+}
+.autoformat > img:nth-child(4n + 2) {
+	background-color: Red;
+}
+.autoformat > img:nth-child(4n + 3) {
+	background-color: White;
+}
+.autoformat > img:nth-child(4n) {
+	background-color: Black;
+}

@@ -1,0 +1,92 @@
+Cloud VM info
+
+#Root and SSH
+	sudo passwd root
+		1989 MR2
+	#enable ssh root login for filezilla
+		sudo nano /etc/ssh/sshd_config
+			# edit this line under #Authentication, not the second one
+			PermitRootLogin yes 
+		sudo systemctl reload ssh
+
+#Apache2
+	sudo apt-get install apache2 php-fpm libapache2-mod-fcgid libnghttp2-dev brotli
+
+	#Add the following lines to each virtualhost
+		ServerName sebringautomotive.shop
+		ServerAdmin website@sebringautomotive.shop
+		DocumentRoot /var/www/html
+		DirectoryIndex index.html
+		
+		<Directory /var/www/html>
+			Options Indexes FollowSymLinks Includes
+			AllowOverride All
+			Require all granted
+			Header set Cache-Control "public, max-age=31536000"
+		</Directory>
+
+	#Add the following to default-ssl
+		SSLEngine on
+		SSLCertificateFile	/etc/ssl/certs/www_sebringautomotive_shop.crt
+		SSLCertificateKeyFile /etc/ssl/private/sebringautomotive.shop.key
+		SSLCertificateChainFile /etc/ssl/certs/chain.crt
+
+	#Add the following line to ssl.conf
+		SSLCipherSuite ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-RSA-AES128-GCM-SHA256
+
+	#Make and add the following to brotli.conf
+		<IfModule mod_brotli.c>
+			AddOutputFilterByType BROTLI_COMPRESS application/javascript application/rss+xml application/vnd.msobject application/x application/x-opentype application/x-otf application/x-truetype application/x-ttf application/x-javascript application/xhtml+xml application/xml font/opentype font/otf font/ttf image/svg+xml image/x-icon image/webp image/png image/jpeg text/css text/html text/javascript text/plain text/xml
+			BrotliCompressionQuality 4
+		</IfModule>
+
+	#Add the following to deflate.conf
+		<IfModule mod_deflate.c>
+			AddOutputFilterByType DEFLATE application/javascript application/rss+xml application/vnd.msobject application/x application/x-opentype application/x-otf application/x-truetype application/x-ttf application/x-javascript application/xhtml+xml application/xml font/opentype font/otf font/ttf image/svg+xml image/x-icon image/webp image/png image/jpeg text/css text/html text/javascript text/plain text/xml
+		</IfModule>
+
+	#Make and add the following to include.conf
+		XBitHack on
+		AddType text/html .shtml
+		AddOutputFilter INCLUDES .shtml
+		AddType text/html .html
+		AddOutputFilter INCLUDES .html
+		AddType text/html .php
+		AddOutputFilter INCLUDES .php
+		AddType text/html .xml
+		AddOutputFilter INCLUDES .xml
+	
+	sudo a2enconf php8.2-fpm
+	sudo a2enmod rewrite ssl headers mpm_event http2 proxy proxy_fcgi deflate brotli include
+	sudo a2ensite default-ssl
+	sudo apachectl restart
+
+#Email
+	#Configue /etc/hosts, add the following line
+		10.0.0.11   ws-sebringautomotive.sebringautomotive.shop ws-sebringautomotive
+	
+	#Enable less secure app access
+		Admin Console - https://admin.google.com/ac/security/lsa
+		Google Account - https://myaccount.google.com/lesssecureapps
+
+	#Install and Configure Postfix
+		sudo apt install postfix
+
+		#Config
+			Satellite site
+			System mail name: sebringautomotive.shop
+			SMTP relay host: [smtp.gmail.com]:587
+
+		#/etc/postfix/main.cf
+			# TLS parameters
+			smtp_use_tls = yes
+			smtp_tls_security_level = encrypt
+			smtp_sasl_auth_enable = yes
+			smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+			smtp_sasl_security_options = noanonymous
+
+		#create and edit /etc/postfix/sasl_passwd, add the following line
+			[smtp.gmail.com]:587 kylesebring@sebringautomotive.shop:1989 MR2
+			sudo postmap /etc/postfix/sasl_passwd
+		
+		sudo systemctl restart postfix
