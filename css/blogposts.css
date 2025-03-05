@@ -1,0 +1,79 @@
+#span-img {
+	min-height: calc(100vh - var(--nav-height) + 1px);
+}
+#main {
+	background-image: none;
+	background-color: var(--blank);
+	position: relative;
+}
+#main::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('../pics/sunsetbg.webp');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.8;
+}
+#articles {
+	padding: 3vw;
+	display: grid;
+	width: auto;
+}
+article {
+	--blog-text-size: min(4vw, 18px);
+	background-color: var(--color-1);
+	margin: 3vw;
+	padding-bottom: 2vh;
+	height: fit-content;
+	z-index: 1;
+	display: grid;
+	grid-auto-rows: min-content;
+}
+@media (min-width: 150vh) {
+	#articles {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+@media (max-width: 150vh) {
+	#articles {
+		grid-template-columns: 1fr;
+	}
+}
+article img {
+	width: 100%;
+	height: 20vh;
+	overflow: hidden;
+	object-fit: cover;
+}
+article hr {
+	margin: auto 3%;
+	width: auto;
+}
+article h3 {
+	margin: 3vh 5% auto;
+	text-align: left;
+}
+article h4 {
+	margin: 0 5%;
+	color: var(--color-3);
+	font-size: var(--blog-text-size);
+	text-align: left;
+}
+article p {
+	margin: 2vh auto;
+	font-size: var(--blog-text-size);
+}
+article a {
+	margin: 2vh auto;
+	padding: 1vh 2vh;
+	font-size: var(--blog-text-size);
+	background-color: var(--color-6);
+}
+article a:hover {
+	background-color: var(--color-5);
+}

@@ -1,0 +1,65 @@
+#span {
+	height: auto;
+	min-height: 25vh;
+}
+#span-img {
+	min-height: calc(100vh - var(--nav-height) + 1px);
+}
+main h2 {
+	--h2-size: 6vmin;
+	letter-spacing: normal;
+	padding: 0;
+}
+#main {
+	background-image: none;
+	background-color: var(--blank);
+	position: relative;
+}
+#main::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('../pics/sunsetbg.webp');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.8;
+}
+#main div {
+	position: relative;
+	margin: 2.5vw 10vw;
+	padding: 0 0 5vw;
+}
+#blog-text {
+	background-color: var(--color-1);
+	text-align: left;
+}
+#blog-text h3 {
+	margin: 20px 5vw;
+	color: var(--color-3);
+	font-size: var(--p-size);
+}
+#blog-text p {
+	margin: 20px 5vw;
+	max-width: 100%;
+}
+#blog-text a {
+	text-decoration: underline;
+}
+#blog-text div {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+#blog-text img {
+	max-height: 70vh;
+	max-width: 80vw;
+	overflow: hidden;
+	object-fit: cover;
+}
+#blog-text img:hover {
+	transform: scale(1.25);
+}
