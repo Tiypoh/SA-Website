@@ -10,33 +10,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to Home Server
-        uses: webfactory/ssh-agent@v0.9.0
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          ssh-private-key: ${{ secrets.SERVER_SSH_KEY_HOME }}
-      
-      - name: Run deployment commands
-        run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER_HOME }}@${{ secrets.SERVER_HOST_HOME }} '
-            cd /var/www/sebringautomotive.shop &&
-            git pull &&
-            sudo chown -R www-data:www-data . &&
+          host: ${{ secrets.SERVER_HOST_HOME }}
+          username: ${{ secrets.SERVER_USER_HOME }}
+          key: ${{ secrets.SERVER_SSH_KEY_HOME }}
+          script: |
+            cd /var/www/sebringautomotive.shop
+            /usr/bin/git pull
+            sudo chown -R www-data:www-data .
             echo "Deployment to Home Server complete!"
-          '
 
   deploy-server-2:
-    # 'needs' ensures this job waits for deploy-server-1 to succeed
     needs: deploy-server-1
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GCloud Server
-        uses: easing-themes/ssh-deploy@main
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY_GCLOUD }}
-          REMOTE_HOST: ${{ secrets.SERVER_HOST_GCLOUD }}
-          REMOTE_USER: ${{ secrets.SERVER_USER_GCLOUD }}
-          SOURCE: "/"
-          TARGET: "/var/www/html"
-          SCRIPT_AFTER: |
-            git pull
+          host: ${{ secrets.SERVER_HOST_GCLOUD }}
+          username: ${{ secrets.SERVER_USER_GCLOUD }}
+          key: ${{ secrets.SERVER_SSH_KEY_GCLOUD }}
+          script: |
+            cd /var/www/html
+            /usr/bin/git pull
             sudo chown -R www-data:www-data .
             echo "Deployment to GCloud Server complete!"
