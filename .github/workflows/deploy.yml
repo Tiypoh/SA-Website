@@ -17,8 +17,9 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY_HOME }}
           script: |
             cd /var/www/sebringautomotive.shop
+            /usr/bin/git config --global --add safe.directory /var/www/sebringautomotive.shop
             /usr/bin/git pull
-            sudo chown -R www-data:www-data .
+            /usr/bin/sudo chown -R www-data:www-data .
             echo "Deployment to Home Server complete!"
 
   deploy-server-2:
@@ -33,6 +34,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY_GCLOUD }}
           script: |
             cd /var/www/html
+            /usr/bin/git config --global --add safe.directory /var/www/html
             /usr/bin/git pull
-            sudo chown -R www-data:www-data .
+            /usr/bin/sudo chown -R www-data:www-data .
             echo "Deployment to GCloud Server complete!"
