@@ -17,11 +17,7 @@ jobs:
       - name: Deploy to Home Server
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER_HOME }}@${{ secrets.SERVER_HOST_HOME }} '
-            cd /var/www/sebringautomotive.shop &&
-            /usr/bin/git config --global --add safe.directory /var/www/sebringautomotive.shop &&
-            /usr/bin/git pull &&
-            /usr/bin/sudo chown -R www-data:www-data . &&
-            echo "Deployment to Home Server complete!"
+            sudo -u www-data git -C /var/www/sebringautomotive.shop pull
           '
 
   deploy-server-2:
@@ -36,9 +32,5 @@ jobs:
       - name: Deploy to GCloud Server
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER_GCLOUD }}@${{ secrets.SERVER_HOST_GCLOUD }} '
-            cd /var/www/html &&
-            /usr/bin/git config --global --add safe.directory /var/www/html &&
-            /usr/bin/git pull &&
-            /usr/bin/sudo chown -R www-data:www-data . &&
-            echo "Deployment to GCloud Server complete!"
+            sudo -u www-data git -C /var/www/html pull
           '
