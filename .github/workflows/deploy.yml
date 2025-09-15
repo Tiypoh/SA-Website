@@ -6,21 +6,22 @@ on:
       - main
 
 jobs:
-  deploy-server-1:
+ deploy-server-1:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to Home Server
-        uses: easing-themes/ssh-deploy@main
+        uses: webfactory/ssh-agent@v0.9.0
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY_HOME }}
-          REMOTE_HOST: ${{ secrets.SERVER_HOST_HOME }}
-          REMOTE_USER: ${{ secrets.SERVER_USER_HOME }}
-          SOURCE: "/"
-          TARGET: "/var/www/sebringautomotive.shop"
-          SCRIPT_AFTER: |
-            git pull
-            sudo chown -R www-data:www-data .
+          ssh-private-key: ${{ secrets.SERVER_SSH_KEY_HOME }}
+      
+      - name: Run deployment commands
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER_HOME }}@${{ secrets.SERVER_HOST_HOME }} '
+            cd /var/www/sebringautomotive.shop &&
+            git pull &&
+            sudo chown -R www-data:www-data . &&
             echo "Deployment to Home Server complete!"
+          '
 
   deploy-server-2:
     # 'needs' ensures this job waits for deploy-server-1 to succeed
