@@ -102,7 +102,7 @@ function send_form(): void {
 <main style='align-items: center; justify-content: center; display: grid; background-color: #000000;'>
 	<span style='width: 100%; font-size: 20pt; color: #ffffff; margin: auto; width: auto;'>Hello, my name is $name, </h2>
 	<span style='width: 100%; font-size: 20pt; color: #ffffff; margin: auto; width: auto;'>my email address is $email, </h2>
-	<span style='width: 100%; font-size: 20pt; color: #ffffff; margin: auto; width: auto;'>my IP address is $remoteIp, </h2>
+	<span style='width: 100%; font-size: 20pt; color: #ffffff; margin: auto; width: auto;'>my IP address is <a href='https://www.iplocation.net/ip-lookup/$remoteIp'>$remoteIp</a>, </h2>
 	<span style='width: 100%; font-size: 20pt; color: #ffffff; margin: auto; width: auto;'>my car is a $vehicle, </h2>
 	<span style='width: 100%; font-size: 20pt; color: #ffffff; margin: auto; width: auto;'>and it needs: </h2>
 	<span style='width: 100%; font-size: 20pt; color: #ffffff; margin: auto; width: auto;'>$message</h2>
