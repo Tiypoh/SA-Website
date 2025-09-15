@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
- deploy-server-1:
+  deploy-server-1:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to Home Server
