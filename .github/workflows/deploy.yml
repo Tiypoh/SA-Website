@@ -10,15 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to Home Server
-        uses: appleboy/ssh-action@v1.0.3
+        uses: easing-themes/ssh-deploy@main
         with:
-          host: ${{ secrets.SERVER_HOST_HOME }}
-          username: ${{ secrets.SERVER_USER_HOME }}
-          key: ${{ secrets.SERVER_SSH_KEY_HOME }}
-          script: |
-            cd /var/www/sebringautomotive.shop
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY_HOME }}
+          REMOTE_HOST: ${{ secrets.SERVER_HOST_HOME }}
+          REMOTE_USER: ${{ secrets.SERVER_USER_HOME }}
+          SOURCE: "/"
+          TARGET: "/var/www/sebringautomotive.shop"
+          SCRIPT_AFTER: |
             git pull
-            sudo chown -R www-data:www-data /var/www/sebringautomotive.shop
+            sudo chown -R www-data:www-data .
             echo "Deployment to Home Server complete!"
 
   deploy-server-2:
@@ -27,13 +28,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GCloud Server
-        uses: appleboy/ssh-action@v1.0.3
+        uses: easing-themes/ssh-deploy@main
         with:
-          host: ${{ secrets.SERVER_HOST_GCLOUD }}
-          username: ${{ secrets.SERVER_USER_GCLOUD }}
-          key: ${{ secrets.SERVER_SSH_KEY_GCLOUD }}
-          script: |
-            cd /var/www/html
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY_GCLOUD }}
+          REMOTE_HOST: ${{ secrets.SERVER_HOST_GCLOUD }}
+          REMOTE_USER: ${{ secrets.SERVER_USER_GCLOUD }}
+          SOURCE: "/"
+          TARGET: "/var/www/html"
+          SCRIPT_AFTER: |
             git pull
-            sudo chown -R www-data:www-data /var/www/html
+            sudo chown -R www-data:www-data .
             echo "Deployment to GCloud Server complete!"
